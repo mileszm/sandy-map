@@ -1,0 +1,16 @@
+.big-map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+}
+.container-1 {
+  width: calc(100% - 4rem);
+  height: 90vh;
+  margin: 2rem;
+}
+.map-overlay {
+  position: relative;
+  top: 18rem;
+  width: 18rem;
+}
