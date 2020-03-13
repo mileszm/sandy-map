@@ -1,0 +1,25 @@
+body {
+  background-color: #bac7c9;
+  padding: 1rem;
+}
+
+.big-map {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  position: relative;
+  height: 90vh;
+  margin-bottom: 4rem;
+}
+.map-overlay {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  max-width: 16rem;
+  margin: 0;
+  z-index: 200;
+}
+.map-overlay.card {
+  background-color: rgba(255,255,255,0.7);
+}
