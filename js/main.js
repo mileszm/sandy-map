@@ -4,18 +4,26 @@ var map1 = new mapboxgl.Map( {
   container: 'map-div-1',
   style: 'mapbox://styles/mapbox/light-v10',
   center: [-73.98, 40.73],
-  zoom: 11
+  zoom: 11,
 });
 
 // map1.addControl(new mapboxgl.NavigationControl());
-
-map1.scrollZoom.disable();
 
 map1.on('load', function() {
 
   map1.addSource('nycha', {
     type: 'geojson',
     data: './data/nycha.geojson',
+  });
+
+  map1.addSource('nycha-comp', {
+    type: 'geojson',
+    data: './data/nycha-comp.geojson',
+  });
+
+  map1.addSource('nycha-cons', {
+    type: 'geojson',
+    data: './data/nycha-cons.geojson',
   });
 
   map1.addSource('flood', {
@@ -34,6 +42,16 @@ map1.on('load', function() {
   });
 
   map1.addLayer({
+        id: 'nycha-cons',
+        type: 'fill',
+        source: 'nycha-cons',
+        paint: {
+          'fill-color': '#444444',
+          'fill-opacity': 1,
+        },
+  });
+
+  map1.addLayer({
       id: 'flood-area',
       type: 'fill',
       source: 'flood',
@@ -49,7 +67,8 @@ var map2 = new mapboxgl.Map( {
   container: 'map-div-2',
   style: 'mapbox://styles/mapbox/light-v10',
   center: [-73.98, 40.73],
-  zoom: 11
+  zoom: 11,
+  interactive: false,
 });
 
 map2.scrollZoom.disable();
