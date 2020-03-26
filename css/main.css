@@ -12,7 +12,7 @@ body {
   position: relative;
   height: 90vh;
   width: 100%;
-  margin: 4rem 0;
+  margin: 1rem 0;
 }
 .map-overlay {
   position: absolute;
@@ -24,4 +24,9 @@ body {
 }
 .map-overlay.card {
   background-color: rgba(255,255,255,0.7);
+}
+
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: white;
 }
